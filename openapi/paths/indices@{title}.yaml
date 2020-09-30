@@ -1,0 +1,27 @@
+post:
+  tags:
+    - Index
+  summary: Create an index
+  description: Create an index by a title
+  operationId:
+  parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  security:
+    - api_key: []
+  responses:
+    '201':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Index.yaml
+    '403':
+      description: Forbidden
+    '400':
+      description: Invalid index supplied
+    '409':
+      description: Conflict

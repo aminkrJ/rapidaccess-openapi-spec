@@ -57,6 +57,8 @@ tags:
     description: Example echo operations
   - name: User
     description: Operations about user
+  - name: Index
+    description: Operations about indices
 servers:
   - url: 'http://example.com/api/v1'
   - url: 'https://example.com/api/v1'
@@ -65,6 +67,8 @@ paths:
     $ref: 'paths/users@{username}.yaml'
   /echo:
     $ref: paths/echo.yaml
+  '/indices/{title}':
+    $ref: 'paths/indices@{title}.yaml'
 components:
   securitySchemes:
     main_auth:
